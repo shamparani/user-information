@@ -1,0 +1,39 @@
+<!-- Page Content -->
+<div class="container"> 
+    <div class="row"> 
+       <div class="col-lg-12 text-center" style="padding-top: 20px;">
+          <div class="container" style="padding-left: 0px; padding-right: 0px;"> 
+             <div class="row"> 
+                <div class="col-sm" style="text-align: left;"> 
+                   {{ title }} 
+                </div>
+             </div> 
+          </div> 
+          <div class="container box" style="margin-top: 10px;"> 
+             <table class="table table-striped"> 
+                <thead> 
+                   <tr> 
+                      <th>Name</th> 
+                      <th>Usename</th> 
+                      <th>Email</th> 
+                      <th>Address</th> 
+                      <th>Phonr Number</th> 
+                      <th>Company</th>
+                   </tr> 
+                </thead> 
+                <tbody> 
+                    
+                   <tr *ngFor="let list of listsOfUser"> 
+                      <th scope="row">{{ list.name }}</th> 
+                      <td>{{ list.username }}</td> 
+                      <td>{{ list.email }}</td> 
+                      <td>{{ list.address.city }} , {{ list.address.street}}</td> 
+                      <td>{{ list.phone }}</td>
+                      <td>{{ list.company.name }}</td> 
+                   </tr> 
+                </tbody> 
+             </table> 
+          </div> 
+       </div> 
+    </div> 
+ </div>
